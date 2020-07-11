@@ -30,3 +30,7 @@ const String VOICE_SEARCH_IN_APPBAR_VIEW_ROUTE = '/voice_search_in_appbar_view';
 
 //Flutter permission
 const String FLUTTER_PERMISSION_VIEW_ROUTE = '/flutter_permission';
+
+//Flutter FlutterLibrary
+const String FLUTTER_LIBRARY_VIEW_ROUTE = '/flutter_library';
+const String INTRODUCTION_SCREEN_VIEW_ROUTE = '/introduction_screen';

@@ -193,6 +193,28 @@ class HomeView extends StatelessWidget {
                 },
               ),
             ),
+            SizedBox(height: 10),
+            ButtonTheme(
+              height: 50.0,
+              child: RaisedButton(
+                color: Colors.blue,
+                elevation: 5,
+                child: Text(
+                  'Flutter Library',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    FLUTTER_LIBRARY_VIEW_ROUTE,
+                    arguments: "Flutter Library",
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),

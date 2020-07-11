@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_design/routing/routing_constants.dart';
 import 'package:flutter_design/screens/bottom_navigation_bar/bottom_navigation_bar.dart';
@@ -7,6 +6,8 @@ import 'package:flutter_design/screens/dropdown/custom_dropdown.dart';
 import 'package:flutter_design/screens/flutter_card/card_inside_list/card_inside_list.dart';
 import 'package:flutter_design/screens/flutter_card/card_one/card_one.dart';
 import 'package:flutter_design/screens/flutter_card/flutter_card.dart';
+import 'package:flutter_design/screens/flutter_library/flutter_library.dart';
+import 'package:flutter_design/screens/flutter_library/my_introduction_screen/my_introduction_screen.dart';
 import 'package:flutter_design/screens/flutter_permission/flutter_permission.dart';
 import 'package:flutter_design/screens/flutter_search/flutter_search.dart';
 import 'package:flutter_design/screens/flutter_search/search_in_appbar/search_in_appbar.dart';
@@ -135,9 +136,27 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case FLUTTER_PERMISSION_VIEW_ROUTE:
       var flutterPermissionPageTitle = settings.arguments;
       return MaterialPageRoute(
-          builder: (context) => FlutterPermission(
-                title: flutterPermissionPageTitle,
-              ));
+        builder: (context) => FlutterPermission(
+          title: flutterPermissionPageTitle,
+        ),
+      );
+
+    /*--------------------------------- Flutter Library ---------------------------------*/
+    case FLUTTER_LIBRARY_VIEW_ROUTE:
+      var flutterLibraryPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => FlutterLibrary(
+          title: flutterLibraryPageTitle,
+        ),
+      );
+
+    case INTRODUCTION_SCREEN_VIEW_ROUTE:
+      var introductionScreenPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => MyIntroductionScreen(
+          title: introductionScreenPageTitle,
+        ),
+      );
 
     /*--------------------------------- UndefinedSearch ---------------------------------*/
     default:
