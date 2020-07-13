@@ -28,6 +28,7 @@ dependencies:
   permission_handler: 5.0.1+1 #This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
   speech_recognition: ^0.3.0 #A flutter plugin to use the speech recognition iOS10+ / Android 4.1+ link: https://github.com/rxlabz/speech_recognition
   introduction_screen: 1.0.9 # Introduction screen allow you to have a screen at launcher for example, where you can explain your app.
+  carousel_slider: 2.2.1 #A carousel slider widget for flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

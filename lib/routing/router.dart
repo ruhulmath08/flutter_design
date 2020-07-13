@@ -6,6 +6,10 @@ import 'package:flutter_design/screens/dropdown/custom_dropdown.dart';
 import 'package:flutter_design/screens/flutter_card/card_inside_list/card_inside_list.dart';
 import 'package:flutter_design/screens/flutter_card/card_one/card_one.dart';
 import 'package:flutter_design/screens/flutter_card/flutter_card.dart';
+import 'package:flutter_design/screens/flutter_hero_widget/flutter_hero_widget.dart';
+import 'package:flutter_design/screens/flutter_hero_widget/hero_animation/flutter_hero_animation.dart';
+import 'package:flutter_design/screens/flutter_library/flutter_carousels/basic_carousels/basic_carouse.dart';
+import 'package:flutter_design/screens/flutter_library/flutter_carousels/flutter_carousels.dart';
 import 'package:flutter_design/screens/flutter_library/flutter_library.dart';
 import 'package:flutter_design/screens/flutter_library/my_introduction_screen/my_introduction_screen.dart';
 import 'package:flutter_design/screens/flutter_permission/flutter_permission.dart';
@@ -155,6 +159,40 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => MyIntroductionScreen(
           title: introductionScreenPageTitle,
+        ),
+      );
+
+    /*--------------------------------- Flutter Library ---------------------------------*/
+    case FLUTTER_HERO_WIDGET_VIEW_ROUTE:
+      var flutterHeroWidgetPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => FlutterHeroWidget(
+          title: flutterHeroWidgetPageTitle,
+        ),
+      );
+
+    case FLUTTER_HERO_ANIMATION_VIEW_ROUTE:
+      var flutterHeroHeroAnimationPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => FlutterHeroAnimation(
+          title: flutterHeroHeroAnimationPageTitle,
+        ),
+      );
+
+    case FLUTTER_CAROUSELS_VIEW_ROUTE:
+      var flutterCarouselsPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => FlutterCarousels(
+          title: flutterCarouselsPageTitle,
+        ),
+      );
+
+    /*--------------------------------- Flutter Library ---------------------------------*/
+    case BASIC_CAROUSELS_VIEW_ROUTE:
+      var basicCarouselViewRoute = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => BasicCarouse(
+          title: basicCarouselViewRoute,
         ),
       );
 

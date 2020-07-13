@@ -41,6 +41,29 @@ class _FlutterLibraryState extends State<FlutterLibrary> {
                   },
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              ButtonTheme(
+                height: 50,
+                child: RaisedButton(
+                  color: Colors.blue,
+                  child: Text(
+                    'Flutter Carousels',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      FLUTTER_CAROUSELS_VIEW_ROUTE,
+                      arguments: 'Flutter Carousels',
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ));
