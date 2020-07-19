@@ -11,15 +11,6 @@ class BlocPattern extends StatefulWidget {
   _BlocPatternState createState() => new _BlocPatternState();
 }
 
-/// // 1. After the page has been created, register it with the app routes
-/// routes: <String, WidgetBuilder>{
-///   BlocPattern.routeName: (BuildContext context) => new BlocPattern(title: "BlocPattern"),
-/// },
-///
-/// // 2. Then this could be used to navigate to the page.
-/// Navigator.pushNamed(context, BlocPattern.routeName);
-///
-
 class _BlocPatternState extends State<BlocPattern> {
   @override
   Widget build(BuildContext context) {

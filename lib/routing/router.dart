@@ -162,7 +162,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
 
-    /*--------------------------------- Flutter Library ---------------------------------*/
+    /*--------------------------------- Flutter HeroWidget ---------------------------------*/
     case FLUTTER_HERO_WIDGET_VIEW_ROUTE:
       var flutterHeroWidgetPageTitle = settings.arguments;
       return MaterialPageRoute(
@@ -187,7 +187,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
 
-    /*--------------------------------- Flutter Library ---------------------------------*/
+    /*--------------------------------- Flutter Carousels ---------------------------------*/
     case BASIC_CAROUSELS_VIEW_ROUTE:
       var basicCarouselViewRoute = settings.arguments;
       return MaterialPageRoute(
