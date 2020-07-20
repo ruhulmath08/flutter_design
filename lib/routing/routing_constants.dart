@@ -45,3 +45,6 @@ const String BASIC_CAROUSELS_VIEW_ROUTE = '/basic_carousels';
 const String NO_CENTER_MODE_CAROUSELS_VIEW_ROUTE = '/no_center_mode_carousels';
 const String IMAGE_CAROUSELS_SLIDE_VIEW_ROUTE = '/image_carousels_slide';
 const String COMPLICATED_IMAGE_SLIDER_CAROUSELS_VIEW_ROUTE = '/complicated_image_carousels';
+
+//flutter BLoC (Business Logic Components) pattern
+const String FLUTTER_BLOC_PATTERN = '/bloc_pattern';

@@ -1,5 +1,8 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_design/routing/routing_constants.dart';
+import 'package:flutter_design/screens/bloc_pattern/bloc_pattern.dart';
 import 'package:flutter_design/screens/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter_design/screens/collapsetoolbar/collapse_toolbar.dart';
 import 'package:flutter_design/screens/dropdown/custom_dropdown.dart';
@@ -193,6 +196,15 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => BasicCarouse(
           title: basicCarouselViewRoute,
+        ),
+      );
+
+    /*--------------------------------- Flutter BLoC pattern ---------------------------------*/
+    case FLUTTER_BLOC_PATTERN:
+      var blocPatternViewRoute = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => BlocPattern(
+          title: blocPatternViewRoute,
         ),
       );
 
