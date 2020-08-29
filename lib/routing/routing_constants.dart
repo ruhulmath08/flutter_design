@@ -22,6 +22,7 @@ const String CARD_INSIDE_LIST_VIEW_ROUTE = '/card_inside_list';
 //Flutter listView
 const String FLUTTER_LIST_VIEW_ROUTE  = '/flutter_list_view';
 const String DISMISSIBLE_LIST_VIEW_ROUTE  = '/dismissible_list_view';
+const String EXPANDABLE_LIST_VIEW_ROUTE  = '/expandable_list_view';
 
 //Flutter Search
 const String FLUTTER_SEARCH_VIEW_ROUTE = '/flutter_search_view';

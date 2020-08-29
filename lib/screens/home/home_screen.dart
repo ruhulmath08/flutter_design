@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design/routing/routing_constants.dart';
+import 'package:flutter_design/screens/internet_speed/internet_speed.dart';
+import 'package:flutter_design/screens/signal_strength_indicator/signal_strength_indicator.dart';
 
 class HomeView extends StatelessWidget {
   final String argument;
@@ -257,7 +259,45 @@ class HomeView extends StatelessWidget {
                   );
                 },
               ),
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ButtonTheme(
+              height: 50.0,
+              child: RaisedButton(
+                color: Colors.blue,
+                elevation: 5,
+                child: Text(
+                  'Internet Speed test',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => InternetSpeed(),
+                  ));
+                },
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ButtonTheme(
+              height: 50.0,
+              child: RaisedButton(
+                color: Colors.blue,
+                elevation: 5,
+                child: Text(
+                  'Signal Strength Indicator',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => MySignal(),
+                  ));
+                },
+              ),
+            ),
           ],
         ),
       ),

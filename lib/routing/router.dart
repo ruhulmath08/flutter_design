@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_design/routing/routing_constants.dart';
 import 'package:flutter_design/screens/bloc_pattern/bloc_pattern.dart';
@@ -21,6 +19,7 @@ import 'package:flutter_design/screens/flutter_search/search_in_appbar/search_in
 import 'package:flutter_design/screens/flutter_search/voice_search_in_appbar/voice_search_in_appbar.dart';
 import 'package:flutter_design/screens/home/home_screen.dart';
 import 'package:flutter_design/screens/list_view/dismissible_list_view/dismissible_list_view.dart';
+import 'package:flutter_design/screens/list_view/expandable_list_view.dart';
 import 'package:flutter_design/screens/list_view/flutter_list_view.dart';
 import 'package:flutter_design/screens/login/login_screen.dart';
 import 'package:flutter_design/screens/undefined/undefined_screen.dart';
@@ -103,6 +102,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => CardInsideList(
           name: cardInsideListPageTitle,
+        ),
+      );
+
+    case EXPANDABLE_LIST_VIEW_ROUTE:
+      var expandableListPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => MyExpandableListView(
+          title: expandableListPageTitle,
         ),
       );
 

@@ -14,7 +14,12 @@ class MyBottomNavigationBar extends StatefulWidget {
 }
 
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
-  int currentTabIndex = 0;
+  int _selectedPage = 1;
+  final _pageOptions = [
+    HomePage(),
+    DailyPage(),
+    LandscapePage(),
+  ];
 
   List<Widget> tabs = [
     TabScreen(Colors.green),
@@ -22,42 +27,87 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
     TabScreen(Colors.pinkAccent)
   ];
 
-  onTapped(int index) {
-    setState(() {
-      currentTabIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('${widget.name}'),
-        ),
-        body: tabs[currentTabIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: onTapped,
-          currentIndex: currentTabIndex,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),
-            ),
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () => launch("mailto:ruhulmath08@gmail.com"),
-                child: Icon(Icons.mail),
-              ),
-              title: Text('Email'),
-            ),
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () => launch("tel://01745077380"),
-                child: Icon(Icons.phone),
-              ),
-              title: Text('Call'),
-            ),
-          ],
-        ));
+      appBar: AppBar(
+        title: Text('${widget.name}'),
+      ),
+      body: _pageOptions[_selectedPage],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedPage,
+        selectedFontSize: 16,
+        onTap: (int index) {
+          setState(() {
+            _selectedPage = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text("Home")
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.dashboard),
+              title: Text("Daily")
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.landscape),
+              title: Text("Landscape")
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+//home page
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Text("Home Page"),
+      ),
+    );
+  }
+}
+
+//daily page
+class DailyPage extends StatefulWidget {
+  @override
+  _DailyPageState createState() => _DailyPageState();
+}
+
+class _DailyPageState extends State<DailyPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Text("Daily Page"),
+      ),
+    );
+  }
+}
+
+//landscape page
+class LandscapePage extends StatefulWidget {
+  @override
+  _LandscapePageState createState() => _LandscapePageState();
+}
+
+class _LandscapePageState extends State<LandscapePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Text("Landscape Page"),
+      ),
+    );
   }
 }

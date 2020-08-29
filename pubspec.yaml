@@ -30,6 +30,9 @@ dependencies:
   introduction_screen: 1.0.9 # Introduction screen allow you to have a screen at launcher for example, where you can explain your app.
   carousel_slider: 2.2.1 #A carousel slider widget for flutter
   http: 0.12.2 #A composable, Future-based library for making HTTP requests.
+  internet_speed_test: 1.1.2+1 #Internet speed test plugin to integrate it in your app whenever you want.
+  signal_strength_indicator: 0.3.0+1
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
