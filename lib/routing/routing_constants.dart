@@ -4,15 +4,35 @@ const String HOME_VIEW_ROUTE = '/home';
 /*--------------------------------- Different Button : Start---------------------------------*/
 const String DIFFERENT_BUTTON_ROUTE = '/different_button';
 const String DIFFERENT_BUTTON_NAME = 'Different Button';
+
 //raised button
 const String RAISED_BUTTON_ROUTE = '/raised_button';
 const String RAISED_BUTTON_NAME = 'Raised Button';
+
+//outline button
+const String OUTLINE_BUTTON_ROUTE = '/outline_button';
+const String OUTLINE_BUTTON_NAME = 'Outline Button';
+
+//flat button
+const String FLAT_BUTTON_ROUTE = '/flat_button';
+const String FLAT_BUTTON_NAME = 'Flat Button';
+
 //radio button
 const String RADIO_BUTTON_ROUTE = '/radio_button';
 const String RADIO_BUTTON_NAME = 'Radio Button';
+
 //toggle button
 const String TOGGLE_BUTTON_ROUTE = '/toggle_button';
 const String TOGGLE_BUTTON_NAME = 'Toggle Button';
+
+//popup menu button
+const String POPUP_MENU_BUTTON_ROUTE = '/popup_menu_button';
+const String POPUP_MENU_BUTTON_NAME = 'Popup Menu Button';
+
+//icon button
+const String ICON_BUTTON_ROUTE = '/icon_button';
+const String ICON_BUTTON_NAME = 'Icon Button';
+
 //switch button
 const String SWITCH_BUTTON_ROUTE = '/switch_button';
 const String SWITCH_BUTTON_NAME = 'Switch Button';

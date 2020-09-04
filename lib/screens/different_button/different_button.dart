@@ -22,94 +22,122 @@ class _DifferentButtonScreenState extends State<DifferentButtonScreen> {
           10,
         ),
         children: [
-          ButtonTheme(
-            height: 50.0,
-            child: RaisedButton(
-              color: Colors.blue,
-              elevation: 5,
-              child: Text(
-                'Raised Button',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
+          RaisedButton(
+            color: Colors.blue,
+            elevation: 5,
+            child: Text(
+              'Raised Button',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
               ),
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  RAISED_BUTTON_ROUTE,
-                );
-              },
             ),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                RAISED_BUTTON_ROUTE,
+              );
+            },
           ),
           SizedBox(
             height: 10,
           ),
-          ButtonTheme(
-            height: 50.0,
-            child: RaisedButton(
-              color: Colors.blue,
-              elevation: 5,
-              child: Text(
-                'Radio Button',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
+          RaisedButton(
+            color: Colors.blue,
+            elevation: 5,
+            child: Text(
+              'OutLineButton',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
               ),
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  RADIO_BUTTON_ROUTE,
-                );
-              },
             ),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                OUTLINE_BUTTON_ROUTE,
+              );
+            },
           ),
           SizedBox(
             height: 10,
           ),
-          ButtonTheme(
-            height: 50.0,
-            child: RaisedButton(
-              color: Colors.blue,
-              elevation: 5,
-              child: Text(
-                'Toggle Button',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
+          RaisedButton(
+            color: Colors.blue,
+            elevation: 5,
+            child: Text(
+              'FlatButton',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
               ),
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  TOGGLE_BUTTON_ROUTE,
-                );
-              },
             ),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                FLAT_BUTTON_ROUTE,
+              );
+            },
           ),
           SizedBox(
             height: 10,
           ),
-          ButtonTheme(
-            height: 50.0,
-            child: RaisedButton(
-              color: Colors.blue,
-              elevation: 5,
-              child: Text(
-                'Switch Button',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
+          RaisedButton(
+            color: Colors.blue,
+            elevation: 5,
+            child: Text(
+              'Radio Button',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
               ),
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  SWITCH_BUTTON_ROUTE,
-                );
-              },
             ),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                RADIO_BUTTON_ROUTE,
+              );
+            },
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          RaisedButton(
+            color: Colors.blue,
+            elevation: 5,
+            child: Text(
+              'Toggle Button',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                TOGGLE_BUTTON_ROUTE,
+              );
+            },
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          RaisedButton(
+            color: Colors.blue,
+            elevation: 5,
+            child: Text(
+              'Switch Button',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                SWITCH_BUTTON_ROUTE,
+              );
+            },
           ),
           SizedBox(
             height: 10,

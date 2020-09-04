@@ -4,6 +4,8 @@ import 'package:flutter_design/screens/bloc_pattern/bloc_pattern.dart';
 import 'package:flutter_design/screens/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter_design/screens/collapsetoolbar/collapse_toolbar.dart';
 import 'package:flutter_design/screens/different_button/different_button.dart';
+import 'package:flutter_design/screens/different_button/flat_button/flat_button.dart';
+import 'package:flutter_design/screens/different_button/outline_button/outline_button.dart';
 import 'package:flutter_design/screens/different_button/radio_button/RadioButtonScreen.dart';
 import 'package:flutter_design/screens/different_button/raised_button/raised_button.dart';
 import 'package:flutter_design/screens/different_button/switch_button/switch_button.dart';
@@ -65,6 +67,23 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           title: RAISED_BUTTON_NAME,
         ),
       );
+
+    //outline button
+    case OUTLINE_BUTTON_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => OutlineButtonScreen(
+          title: OUTLINE_BUTTON_NAME,
+        ),
+      );
+
+    //flat button
+    case FLAT_BUTTON_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => FlatButtonScreen(
+          title: FLAT_BUTTON_NAME,
+        ),
+      );
+      break;
 
     //radio button
     case RADIO_BUTTON_ROUTE:
