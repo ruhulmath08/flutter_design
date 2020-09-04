@@ -5,6 +5,8 @@ import 'package:flutter_design/screens/bottom_navigation_bar/bottom_navigation_b
 import 'package:flutter_design/screens/collapsetoolbar/collapse_toolbar.dart';
 import 'package:flutter_design/screens/different_button/different_button.dart';
 import 'package:flutter_design/screens/different_button/radio_button/RadioButtonScreen.dart';
+import 'package:flutter_design/screens/different_button/raised_button/raised_button.dart';
+import 'package:flutter_design/screens/different_button/switch_button/switch_button.dart';
 import 'package:flutter_design/screens/different_button/toggle_button/toggle_button.dart';
 import 'package:flutter_design/screens/dropdown/custom_dropdown.dart';
 import 'package:flutter_design/screens/flutter_card/card_inside_list/card_inside_list.dart';
@@ -56,6 +58,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
 
+    //raised button
+    case RAISED_BUTTON_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => RaisedButtonScreen(
+          title: RAISED_BUTTON_NAME,
+        ),
+      );
+
     //radio button
     case RADIO_BUTTON_ROUTE:
       return MaterialPageRoute(
@@ -64,11 +74,19 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
 
-  //toggle button
+    //toggle button
     case TOGGLE_BUTTON_ROUTE:
       return MaterialPageRoute(
         builder: (context) => ToggleButtonScreen(
           title: TOGGLE_BUTTON_NAME,
+        ),
+      );
+
+    //switch button
+    case SWITCH_BUTTON_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => SwitchButtonScreen(
+          title: SWITCH_BUTTON_NAME,
         ),
       );
     /*--------------------------------- Default Button : End---------------------------------*/

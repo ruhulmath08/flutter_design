@@ -13,6 +13,9 @@ const String RADIO_BUTTON_NAME = 'Radio Button';
 //toggle button
 const String TOGGLE_BUTTON_ROUTE = '/toggle_button';
 const String TOGGLE_BUTTON_NAME = 'Toggle Button';
+//switch button
+const String SWITCH_BUTTON_ROUTE = '/switch_button';
+const String SWITCH_BUTTON_NAME = 'Switch Button';
 /*--------------------------------- Different Button : End---------------------------------*/
 
 //Flutter ToolBar

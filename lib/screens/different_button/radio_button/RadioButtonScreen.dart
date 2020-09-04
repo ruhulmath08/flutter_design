@@ -115,14 +115,14 @@ class _RadioButtonScreenState extends State<RadioButtonScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Select Your Favourite Language",
+                  "Favourite Language",
                 ),
                 Row(
                   children: [
                     Radio(
                       groupValue: languageValue,
                       value: 1,
-                      onChanged: (value){
+                      onChanged: (value) {
                         selectLanguage(value);
                         language = "Java";
                         print("$language : Value : $value");
@@ -136,7 +136,7 @@ class _RadioButtonScreenState extends State<RadioButtonScreen> {
                     Radio(
                       groupValue: languageValue,
                       value: 2,
-                      onChanged: (value){
+                      onChanged: (value) {
                         selectLanguage(value);
                         language = "Dart";
                         print("$language : Value : $value");
@@ -150,7 +150,7 @@ class _RadioButtonScreenState extends State<RadioButtonScreen> {
                     Radio(
                       groupValue: languageValue,
                       value: 3,
-                      onChanged: (value){
+                      onChanged: (value) {
                         selectLanguage(value);
                         language = "Java Script";
                         print("$language : Value : $value");
@@ -159,13 +159,12 @@ class _RadioButtonScreenState extends State<RadioButtonScreen> {
                     Text("Java Script")
                   ],
                 ),
-
                 Row(
                   children: [
                     Radio(
                       groupValue: languageValue,
                       value: 4,
-                      onChanged: (value){
+                      onChanged: (value) {
                         selectLanguage(value);
                         language = "PHP";
                         print("$language : Value : $value");
@@ -175,7 +174,54 @@ class _RadioButtonScreenState extends State<RadioButtonScreen> {
                   ],
                 ),
               ],
-            )
+            ),
+            Divider(
+              thickness: 2,
+              color: Colors.grey,
+            ),
+            Text(
+              "Result",
+              style: TextStyle(
+                fontSize: 20,
+                //color: Colors.greenAccent
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                Text(
+                  "Select Gender : ",
+                  style: TextStyle(
+                    fontSize: 20,
+                    //color: Colors.greenAccent
+                  ),
+                ),
+                Text(
+                  "$gender",
+                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                Text(
+                  "Favourite Language : ",
+                  style: TextStyle(
+                    fontSize: 20,
+                    //color: Colors.greenAccent
+                  ),
+                ),
+                Text(
+                  "$language",
+                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                ),
+              ],
+            ),
           ],
         ),
       ),
