@@ -3,6 +3,9 @@ import 'package:flutter_design/routing/routing_constants.dart';
 import 'package:flutter_design/screens/bloc_pattern/bloc_pattern.dart';
 import 'package:flutter_design/screens/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter_design/screens/collapsetoolbar/collapse_toolbar.dart';
+import 'package:flutter_design/screens/different_button/different_button.dart';
+import 'package:flutter_design/screens/different_button/radio_button/RadioButtonScreen.dart';
+import 'package:flutter_design/screens/different_button/toggle_button/toggle_button.dart';
 import 'package:flutter_design/screens/dropdown/custom_dropdown.dart';
 import 'package:flutter_design/screens/flutter_card/card_inside_list/card_inside_list.dart';
 import 'package:flutter_design/screens/flutter_card/card_one/card_one.dart';
@@ -19,13 +22,24 @@ import 'package:flutter_design/screens/flutter_search/search_in_appbar/search_in
 import 'package:flutter_design/screens/flutter_search/voice_search_in_appbar/voice_search_in_appbar.dart';
 import 'package:flutter_design/screens/home/home_screen.dart';
 import 'package:flutter_design/screens/list_view/dismissible_list_view/dismissible_list_view.dart';
-import 'package:flutter_design/screens/list_view/expandable_list_view.dart';
+import 'package:flutter_design/screens/list_view/expandable_list_view_with_card/expandable_list_view_with_card.dart';
+import 'file:///C:/Users/HP/Desktop/flutter_app/flutter_design/lib/screens/list_view/expandable_list_view/expandable_list_view.dart';
 import 'package:flutter_design/screens/list_view/flutter_list_view.dart';
 import 'package:flutter_design/screens/login/login_screen.dart';
 import 'package:flutter_design/screens/undefined/undefined_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
+    //login screen
+    case LOGIN_VIEW_ROUTE:
+      var loginPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => LoginView(
+          argument: loginPageTitle,
+        ),
+      );
+
+    //home screen
     case HOME_VIEW_ROUTE:
       var loginHome = settings.arguments;
       return MaterialPageRoute(
@@ -34,13 +48,30 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
 
-    case LOGIN_VIEW_ROUTE:
-      var loginPageTitle = settings.arguments;
+    /*--------------------------------- Default Button : Start---------------------------------*/
+    case DIFFERENT_BUTTON_ROUTE:
       return MaterialPageRoute(
-        builder: (context) => LoginView(
-          argument: loginPageTitle,
+        builder: (context) => DifferentButtonScreen(
+          title: DIFFERENT_BUTTON_NAME,
         ),
       );
+
+    //radio button
+    case RADIO_BUTTON_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => RadioButtonScreen(
+          title: RADIO_BUTTON_NAME,
+        ),
+      );
+
+  //toggle button
+    case TOGGLE_BUTTON_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => ToggleButtonScreen(
+          title: TOGGLE_BUTTON_NAME,
+        ),
+      );
+    /*--------------------------------- Default Button : End---------------------------------*/
 
     case COLLAPSE_TOOLBAR_VIEW_ROUTE:
       var collapseToolBarPageTitle = settings.arguments;
@@ -110,6 +141,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => MyExpandableListView(
           title: expandableListPageTitle,
+        ),
+      );
+
+    case EXPANDABLE_LIST_VIEW_WITH_CARD_ROUTE:
+      var expandableListWithCardPageTitle = settings.arguments;
+      return MaterialPageRoute(
+        builder: (context) => ExpandableListViewWithCard(
+          title: expandableListWithCardPageTitle,
         ),
       );
 

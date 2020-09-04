@@ -1,6 +1,20 @@
 const String LOGIN_VIEW_ROUTE = '/';
 const String HOME_VIEW_ROUTE = '/home';
 
+/*--------------------------------- Different Button : Start---------------------------------*/
+const String DIFFERENT_BUTTON_ROUTE = '/different_button';
+const String DIFFERENT_BUTTON_NAME = 'Different Button';
+//raised button
+const String RAISED_BUTTON_ROUTE = '/raised_button';
+const String RAISED_BUTTON_NAME = 'Raised Button';
+//radio button
+const String RADIO_BUTTON_ROUTE = '/radio_button';
+const String RADIO_BUTTON_NAME = 'Radio Button';
+//toggle button
+const String TOGGLE_BUTTON_ROUTE = '/toggle_button';
+const String TOGGLE_BUTTON_NAME = 'Toggle Button';
+/*--------------------------------- Different Button : End---------------------------------*/
+
 //Flutter ToolBar
 const String COLLAPSE_TOOLBAR_VIEW_ROUTE = '/collapse_toolbar';
 
@@ -23,6 +37,7 @@ const String CARD_INSIDE_LIST_VIEW_ROUTE = '/card_inside_list';
 const String FLUTTER_LIST_VIEW_ROUTE  = '/flutter_list_view';
 const String DISMISSIBLE_LIST_VIEW_ROUTE  = '/dismissible_list_view';
 const String EXPANDABLE_LIST_VIEW_ROUTE  = '/expandable_list_view';
+const String EXPANDABLE_LIST_VIEW_WITH_CARD_ROUTE  = '/expandable_list_view_with_card';
 
 //Flutter Search
 const String FLUTTER_SEARCH_VIEW_ROUTE = '/flutter_search_view';

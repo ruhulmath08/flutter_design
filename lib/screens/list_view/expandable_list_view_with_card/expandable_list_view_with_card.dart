@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
 
-class MyExpandableListView extends StatefulWidget {
+class ExpandableListViewWithCard extends StatefulWidget {
   final String title;
 
-  const MyExpandableListView({Key key, this.title}) : super(key: key);
+  const ExpandableListViewWithCard({Key key, this.title}) : super(key: key);
 
   @override
-  _MyExpandableListViewState createState() => _MyExpandableListViewState();
+  _ExpandableListViewWithCardState createState() =>
+      _ExpandableListViewWithCardState();
 }
 
-class _MyExpandableListViewState extends State<MyExpandableListView> {
+class _ExpandableListViewWithCardState
+    extends State<ExpandableListViewWithCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("${widget.title}"),
       ),
-      body: ListView.builder(
-        itemCount: data.length,
-        itemBuilder: (BuildContext context, int index) => EntryItem(
-          data[index],
+      body: Padding(
+        padding: const EdgeInsets.only(left: 5, right: 5),
+        child: ListView.builder(
+          itemCount: data.length,
+          itemBuilder: (BuildContext context, int index) => EntryItem(
+            data[index],
+          ),
         ),
       ),
     );
@@ -40,7 +45,30 @@ class Entry {
 // This is the entire multi-level list displayed by this app
 final List<Entry> data = <Entry>[
   Entry(
-    "Flutter Toolbar",
+    "Different Button",
+    <Entry>[
+      Entry("RaisedButton"),
+      Entry("OutlineButton"),
+      Entry("FlatButton"),
+      Entry("IconButton"),
+      Entry("FloatingActionButton"),
+      Entry("RadioButton"),
+      Entry("ToggleButton"),
+      Entry("CheckBox"),
+      Entry("MaterialButton"),
+      Entry("Button Inside Circle"),
+    ],
+  ),
+  Entry(
+    "Date Picker",
+    <Entry>[
+      Entry("Flutter DatePicker"),
+      Entry("Flutter Range Date Picker"),
+      Entry("Flutter DateTime Picker"),
+    ],
+  ),
+  Entry(
+    "Toolbar in Flutter",
     <Entry>[
       Entry("Collapse ToolBar"),
     ],
@@ -54,35 +82,35 @@ final List<Entry> data = <Entry>[
     ],
   ),
   Entry(
-    "Flutter Card",
+    "Card Design in Flutter",
     <Entry>[
       Entry("Card With Grid"),
       Entry("Card Inside ListView"),
     ],
   ),
   Entry(
-    "Flutter Dialog Box",
+    "Dialog Box Design",
     <Entry>[
       Entry("Dialog"),
       Entry("Custom Dialog"),
     ],
   ),
   Entry(
-    "Flutter Dropdown",
+    "Dropdown Button",
     <Entry>[
       Entry("Dropdown"),
       Entry("Custom Dropdown"),
     ],
   ),
   Entry(
-    "Flutter ListView",
+    "ListView in Flutter",
     <Entry>[
       Entry("ListView"),
       Entry("Expandable ListView"),
     ],
   ),
   Entry(
-    "Flutter Search",
+    "Search in Flutter",
     <Entry>[
       Entry("Search in Toolbar"),
       Entry("Expandable ListView"),
@@ -95,14 +123,14 @@ final List<Entry> data = <Entry>[
     ],
   ),
   Entry(
-    "Flutter Library",
+    "Library In Flutter",
     <Entry>[
       Entry("Introduction Screen"),
       Entry("Flutter Carousels"),
     ],
   ),
   Entry(
-    "Flutter Pattern",
+    "Design Pattern in Flutter",
     <Entry>[
       Entry("Flutter BLoC Pattern"),
     ],
@@ -118,18 +146,35 @@ class EntryItem extends StatelessWidget {
   // This function recursively creates the multi-level list rows.
   Widget _buildTiles(Entry root) {
     if (root.children.isEmpty) {
-      return ListTile(
-        title: Text(root.title),
+      return Card(
+        elevation: 5,
+        child: ListTile(
+          leading: CircleAvatar(
+            child: Text(
+              "${root.title[0]}",
+            ),
+          ),
+          title: Text(root.title),
+          trailing: Icon(
+            Icons.arrow_forward_ios,
+          ),
+          onTap: () {
+            print(root.title);
+          },
+        ),
       );
     }
-    return ExpansionTile(
-      key: PageStorageKey<Entry>(root),
-      title: Text(root.title),
-      children: root.children.map<Widget>(_buildTiles).toList(),
-
+    return Card(
+      elevation: 5,
+      child: ExpansionTile(
+        key: PageStorageKey<Entry>(root),
+        leading: CircleAvatar(
+          child: Text("${root.title[0]}"),
+        ),
+        title: Text(root.title),
+        children: root.children.map<Widget>(_buildTiles).toList(),
+      ),
     );
-
-
   }
 
   @override
