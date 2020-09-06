@@ -14,23 +14,27 @@ import 'package:flutter_design/screens/dropdown/custom_dropdown.dart';
 import 'package:flutter_design/screens/flutter_card/card_inside_list/card_inside_list.dart';
 import 'package:flutter_design/screens/flutter_card/card_one/card_one.dart';
 import 'package:flutter_design/screens/flutter_card/flutter_card.dart';
+import 'package:flutter_design/screens/flutter_grid_view/flutter_grid_view.dart';
 import 'package:flutter_design/screens/flutter_hero_widget/flutter_hero_widget.dart';
 import 'package:flutter_design/screens/flutter_hero_widget/hero_animation/flutter_hero_animation.dart';
 import 'package:flutter_design/screens/flutter_library/flutter_carousels/basic_carousels/basic_carouse.dart';
 import 'package:flutter_design/screens/flutter_library/flutter_carousels/flutter_carousels.dart';
 import 'package:flutter_design/screens/flutter_library/flutter_library.dart';
 import 'package:flutter_design/screens/flutter_library/my_introduction_screen/my_introduction_screen.dart';
+import 'package:flutter_design/screens/flutter_list_view/dismissible_list_view/dismissible_list_view.dart';
+import 'package:flutter_design/screens/flutter_list_view/expandable_list_view/expandable_list_view.dart';
+import 'package:flutter_design/screens/flutter_list_view/expandable_list_view_with_card/expandable_list_view_with_card.dart';
+import 'package:flutter_design/screens/flutter_list_view/flutter_list_view.dart';
 import 'package:flutter_design/screens/flutter_permission/flutter_permission.dart';
 import 'package:flutter_design/screens/flutter_search/flutter_search.dart';
 import 'package:flutter_design/screens/flutter_search/search_in_appbar/search_in_appbar.dart';
 import 'package:flutter_design/screens/flutter_search/voice_search_in_appbar/voice_search_in_appbar.dart';
 import 'package:flutter_design/screens/home/home_screen.dart';
-import 'package:flutter_design/screens/list_view/dismissible_list_view/dismissible_list_view.dart';
-import 'package:flutter_design/screens/list_view/expandable_list_view_with_card/expandable_list_view_with_card.dart';
-import 'file:///C:/Users/HP/Desktop/flutter_app/flutter_design/lib/screens/list_view/expandable_list_view/expandable_list_view.dart';
-import 'package:flutter_design/screens/list_view/flutter_list_view.dart';
 import 'package:flutter_design/screens/login/login_screen.dart';
 import 'package:flutter_design/screens/undefined/undefined_screen.dart';
+
+import 'routing_constants.dart';
+import 'routing_constants.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -290,6 +294,15 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           title: blocPatternViewRoute,
         ),
       );
+
+    /*--------------------------------- Flutter GridView: Start ---------------------------------*/
+    case FLUTTER_GRID_VIEW_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => FlutterGridViewScreen(
+          title: FLUTTER_GRID_VIEW_NAME,
+        ),
+      );
+    /*--------------------------------- Flutter GridView: End ---------------------------------*/
 
     /*--------------------------------- UndefinedSearch ---------------------------------*/
     default:

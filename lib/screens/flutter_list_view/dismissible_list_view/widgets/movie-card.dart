@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design/screens/list_view/dismissible_list_view/models/movie.dart';
+import 'package:flutter_design/screens/flutter_list_view/dismissible_list_view/models/movie.dart';
 
 class MovieCard extends StatelessWidget {
   final Movie movie;

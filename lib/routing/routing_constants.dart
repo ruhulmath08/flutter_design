@@ -87,3 +87,8 @@ const String COMPLICATED_IMAGE_SLIDER_CAROUSELS_VIEW_ROUTE = '/complicated_image
 
 //flutter BLoC (Business Logic Components) pattern
 const String FLUTTER_BLOC_PATTERN = '/bloc_pattern';
+
+/*--------------------------------- GridView : Start---------------------------------*/
+const String FLUTTER_GRID_VIEW_ROUTE = '/flutter_grid_view';
+const String FLUTTER_GRID_VIEW_NAME = "Flutter GridView";
+/*--------------------------------- GridView : End---------------------------------*/

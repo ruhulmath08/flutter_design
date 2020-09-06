@@ -1,5 +1,4 @@
-import 'package:flutter_design/screens/list_view/dismissible_list_view/models/movie.dart';
-
+import 'package:flutter_design/screens/flutter_list_view/dismissible_list_view/models/movie.dart';
 class MovieList {
   static List<Movie> getMovies() {
     return [

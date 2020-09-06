@@ -3,6 +3,8 @@ import 'package:flutter_design/routing/routing_constants.dart';
 import 'package:flutter_design/screens/internet_speed/internet_speed.dart';
 import 'package:flutter_design/screens/signal_strength_indicator/signal_strength_indicator.dart';
 
+import '../../routing/routing_constants.dart';
+
 class HomeView extends StatelessWidget {
   final String argument;
 
@@ -168,6 +170,27 @@ class HomeView extends StatelessWidget {
                     context,
                     FLUTTER_LIST_VIEW_ROUTE,
                     arguments: "Flutter List View",
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 10),
+            ButtonTheme(
+              height: 50.0,
+              child: RaisedButton(
+                color: Colors.blue,
+                elevation: 5,
+                child: Text(
+                  'Flutter GridView',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    FLUTTER_GRID_VIEW_ROUTE,
                   );
                 },
               ),

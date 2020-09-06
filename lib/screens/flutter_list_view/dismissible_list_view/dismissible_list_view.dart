@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design/screens/list_view/dismissible_list_view/data/movie_list.dart';
-import 'package:flutter_design/screens/list_view/dismissible_list_view/models/movie.dart';
-import 'package:flutter_design/screens/list_view/dismissible_list_view/widgets/movie-card.dart';
+import 'package:flutter_design/screens/flutter_list_view/dismissible_list_view/models/movie.dart';
+import 'package:flutter_design/screens/flutter_list_view/dismissible_list_view/widgets/movie-card.dart';
+
+import 'data/movie_list.dart';
 
 class DismissibleListView extends StatefulWidget {
   DismissibleListView({Key key, this.title}) : super(key: key);
