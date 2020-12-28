@@ -10,7 +10,9 @@ import 'package:flutter_design/screens/different_button/radio_button/RadioButton
 import 'package:flutter_design/screens/different_button/raised_button/raised_button.dart';
 import 'package:flutter_design/screens/different_button/switch_button/switch_button.dart';
 import 'package:flutter_design/screens/different_button/toggle_button/toggle_button.dart';
-import 'package:flutter_design/screens/dropdown/custom_dropdown.dart';
+import 'package:flutter_design/screens/dropdown/dropdown_from_db.dart';
+import 'package:flutter_design/screens/dropdown/default_dropdown.dart';
+import 'package:flutter_design/screens/dropdown/flutter_dropdown.dart';
 import 'package:flutter_design/screens/flutter_card/card_inside_list/card_inside_list.dart';
 import 'package:flutter_design/screens/flutter_card/card_one/card_one.dart';
 import 'package:flutter_design/screens/flutter_card/flutter_card.dart';
@@ -29,6 +31,7 @@ import 'package:flutter_design/screens/flutter_permission/flutter_permission.dar
 import 'package:flutter_design/screens/flutter_search/flutter_search.dart';
 import 'package:flutter_design/screens/flutter_search/search_in_appbar/search_in_appbar.dart';
 import 'package:flutter_design/screens/flutter_search/voice_search_in_appbar/voice_search_in_appbar.dart';
+import 'package:flutter_design/screens/flutter_speech_to_text/flutter_speech_to_text.dart';
 import 'package:flutter_design/screens/home/home_screen.dart';
 import 'package:flutter_design/screens/login/login_screen.dart';
 import 'package:flutter_design/screens/undefined/undefined_screen.dart';
@@ -146,19 +149,29 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
 
-//    case CUSTOM_DIALOG_VIEW_ROUTE:
-//      var customDialogViewArgument = settings.arguments;
-//      return MaterialPageRoute(
-//        builder: (context) => FlutterCustomDialog(),
-//      );
-
-    case CUSTOM_DROP_DOWN_VIEW_ROUTE:
-      var customDropdownPageTitle = settings.arguments;
+    /*--------------------------------- Dropdown: Start ---------------------------------*/
+    case FLUTTER_DROPDOWN_VIEW_ROUTE:
       return MaterialPageRoute(
-        builder: (context) => CustomDropdown(
-          title: customDropdownPageTitle,
+        builder: (context) => FlutterDropDown(
+          pageTitle: FLUTTER_DROPDOWN_TITLE,
         ),
       );
+
+    case DEFAULT_DROPDOWN_VIEW_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => DefaultDropDown(
+          pageTitle: DEFAULT_DROPDOWN_TITLE,
+        ),
+      );
+
+    case DROPDOWN_FROM_DB_VIEW_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => DropdownFromDB(
+          pageTitle: DROPDOWN_FROM_DB_TITLE,
+        ),
+      );
+
+    /*--------------------------------- Dropdown: End ---------------------------------*/
 
     /*--------------------------------- Flutter ListView ---------------------------------*/
     case FLUTTER_LIST_VIEW_ROUTE:
@@ -303,6 +316,15 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
     /*--------------------------------- Flutter GridView: End ---------------------------------*/
+
+  /*--------------------------------- Flutter Speech to Text : Start---------------------------------*/
+    case FLUTTER_SPEECH_TO_TEXT_ROUTE:
+      return MaterialPageRoute(
+        builder: (context) => FlutterSpeechToText(
+          tittle: FLUTTER_SPEECH_TO_TEXT_TITTLE,
+        ),
+      );
+  /*--------------------------------- Flutter Speech to Text : End---------------------------------*/
 
     /*--------------------------------- UndefinedSearch ---------------------------------*/
     default:

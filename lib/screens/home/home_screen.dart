@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_design/routing/routing_constants.dart';
+import 'package:flutter_design/screens/home/navation_drawer.dart';
 import 'package:flutter_design/screens/internet_speed/internet_speed.dart';
 import 'package:flutter_design/screens/signal_strength_indicator/signal_strength_indicator.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../routing/routing_constants.dart';
 
@@ -18,6 +21,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         title: Text('$argument'),
       ),
+      drawer: myDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListView(
@@ -137,7 +141,7 @@ class HomeView extends StatelessWidget {
                 color: Colors.blue,
                 elevation: 5,
                 child: Text(
-                  'Custom Dropdown Menu',
+                  'Flutter Dropdown Menu',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -146,8 +150,7 @@ class HomeView extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(
                     context,
-                    CUSTOM_DROP_DOWN_VIEW_ROUTE,
-                    arguments: "Custom Dropdown Menu",
+                    FLUTTER_DROPDOWN_VIEW_ROUTE,
                   );
                 },
               ),
@@ -317,9 +320,11 @@ class HomeView extends StatelessWidget {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => InternetSpeed(),
-                  ));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => InternetSpeed(),
+                      ));
                 },
               ),
             ),
@@ -336,15 +341,42 @@ class HomeView extends StatelessWidget {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => MySignal(),
-                  ));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MySignal(),
+                      ));
                 },
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  //Based on the orientation of the parent widget, figure out how to bast Layout our converent
+  Widget _myDashBoard(Orientation deviceOrientation) {
+    EdgeInsets _padding = const EdgeInsets.all(10.0);
+
+    return Padding(
+      padding: _padding,
+      child: OrientationBuilder(builder: (BuildContext context,
+          Orientation orientation) {
+        if (orientation == Orientation.portrait) {
+          return SingleChildScrollView(
+            child: Text("Portrait Mode"),
+          );
+        } else {
+          return SingleChildScrollView(
+            child: Center(
+              child: Container(
+                child: Text("Landscape Mode"),
+              ),
+            ),
+          );
+        }
+      }),
     );
   }
 }

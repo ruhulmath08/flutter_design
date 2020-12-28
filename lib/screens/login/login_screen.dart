@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_design/database/database_helper.dart';
 import 'package:flutter_design/routing/routing_constants.dart';
 
 class LoginView extends StatefulWidget {
@@ -11,9 +12,18 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
+
+  DatabaseHelper databaseHelper;
+  bool _obscureText;
+
+  @override
+  void initState() {
+    _obscureText = true;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    bool _obscureText = true;
 
     return Scaffold(
       appBar: AppBar(
@@ -62,21 +72,21 @@ class _LoginViewState extends State<LoginView> {
                 obscureText: _obscureText,
                 decoration: InputDecoration(
                     hintText: 'Password',
+                    labelText: 'Password',
                     prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
-                    suffixIcon: GestureDetector(
+                    suffixIcon: InkWell(
                       onTap: () {
                         setState(() {
                           _obscureText = !_obscureText;
-                          print(_obscureText);
                         });
+                        print(_obscureText);
                       },
                       child: Icon(
                         _obscureText ? Icons.visibility : Icons.visibility_off,
-                        semanticLabel:
-                        _obscureText ? 'show password' : 'hide password',
+                        semanticLabel: "uuuuu",
                       ),
                     )),
               ),

@@ -11,23 +11,22 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^5.1.2 #phone call
-  english_words: 3.1.5 #A package containing the most ~5000 used English words and some utility functions.
-  permission_handler: 5.0.1+1 #This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
-  speech_recognition: ^0.3.0 #A flutter plugin to use the speech recognition iOS10+ / Android 4.1+ link: https://github.com/rxlabz/speech_recognition
-  introduction_screen: 1.0.9 # Introduction screen allow you to have a screen at launcher for example, where you can explain your app.
-  carousel_slider: 2.2.1 #A carousel slider widget for flutter
-  http: 0.12.2 #A composable, Future-based library for making HTTP requests.
-  internet_speed_test: 1.1.2+1 #Internet speed test plugin to integrate it in your app whenever you want.
-  signal_strength_indicator: 0.3.0+1
-  toast: 0.1.5 #For display toast message
-  syntax_highlighter: 0.1.1 #Highlighting syntax in code snippets for code recipes
-  animated_floatactionbuttons: ^0.1.0 #To provide Floating Action widget to zoom in and out code snippet text
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
+  url_launcher: ^5.1.2
+  english_words: 3.1.5
+  permission_handler: 5.0.1+1
+  speech_recognition: ^0.3.0
+  introduction_screen: 1.0.9
+  carousel_slider: 2.2.1
+  http: 0.12.2
+  internet_speed_test: 1.1.2+1
+  signal_strength_indicator: 0.3.0+1
+  toast: 0.1.5
+  syntax_highlighter: 0.1.1
+  animated_floatactionbuttons: ^0.1.0
+  sqflite: 1.3.2+1
+  path_provider: any
+  font_awesome_flutter: 8.11.0
 
 dev_dependencies:
   flutter_test:
